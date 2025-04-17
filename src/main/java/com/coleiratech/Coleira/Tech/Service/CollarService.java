@@ -5,6 +5,8 @@ import com.coleiratech.Coleira.Tech.Repository.CollarRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class CollarService {
@@ -18,5 +20,9 @@ public class CollarService {
     public CollarEntity saveLocaltion(CollarEntity collar) {
         collar.setDateTime(LocalDateTime.now());
         return repository.save(collar);
+    }
+
+    public Optional<CollarEntity> getLocationById(UUID id) {
+        return repository.findById(id);
     }
 }
