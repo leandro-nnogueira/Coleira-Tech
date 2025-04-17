@@ -6,6 +6,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
+import java.time.LocalDateTime;
+import java.util.UUID;
+
 @Entity
 @Getter
 @Setter
@@ -15,8 +18,8 @@ public class CollarEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    private UUID id;
 
     private String location;
-    private String timeStamp;
+    private LocalDateTime dateTime;
 }
