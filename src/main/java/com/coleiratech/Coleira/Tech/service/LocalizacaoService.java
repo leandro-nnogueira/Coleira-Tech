@@ -19,7 +19,6 @@ public class LocalizacaoService {
     private final LocalizacaoRepository repository;
 
     public Localizacao salvar(Localizacao localizacao) {
-        // Registra a data/hora do recebimento da localização
         localizacao.setDataHoraRecebimento(LocalDateTime.now());
         return repository.save(localizacao);
     }
