@@ -50,7 +50,7 @@ O banco de dados PostgreSQL estará rodando em:
 
 - `POST /localizacao` – Enviar dados de localização
 - `GET /localizacao/ultima/{idAnimal}` – Buscar última localização
-- `GET /localizacao/historico/{idAnimal}?dataInicial=...&dataFinal=...` – Buscar histórico por data
+- `GET /localizacao/{idAnimal}` - Listar todas as localizações de um anial
 
 ## 🧠 Como contribuir
 
