@@ -26,11 +26,10 @@ public class Dono {
     private String telefone;
 
     @OneToMany(mappedBy = "dono", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonManagedReference
+    @JsonManagedReference(value = "dono-pet")
     private List<Pet> pets;
 
     @OneToMany(mappedBy = "dono", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonManagedReference
+    @JsonManagedReference(value = "dono-coleira")
     private List<Coleira> coleiras;
-
 }

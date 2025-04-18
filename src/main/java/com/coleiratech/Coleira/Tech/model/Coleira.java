@@ -23,11 +23,11 @@ public class Coleira {
 
     @OneToOne
     @JoinColumn(name = "pet_id", nullable = false)
-    @JsonBackReference
+    @JsonBackReference(value = "pet-coleira")
     private Pet pet;
 
     @ManyToOne
     @JoinColumn(name = "dono_id", nullable = false)
-    @JsonBackReference
+    @JsonBackReference(value = "dono-coleira")
     private Dono dono;
 }
