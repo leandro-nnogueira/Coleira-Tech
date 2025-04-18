@@ -1,5 +1,6 @@
 package com.coleiratech.Coleira.Tech.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,9 +26,11 @@ public class Dono {
     private String telefone;
 
     @OneToMany(mappedBy = "dono", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<Pet> pets;
 
     @OneToMany(mappedBy = "dono", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<Coleira> coleiras;
 
 }
